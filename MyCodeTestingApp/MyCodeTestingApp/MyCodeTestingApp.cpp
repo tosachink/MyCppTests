@@ -5,6 +5,15 @@
 #include <tchar.h>
 
 
+
+
+
+
+
+
+
+
+/*
 bool mylogin(const char* kpszUserName, const char* kpszPassword)
 {
     bool retval = false;
@@ -35,12 +44,12 @@ void mynewanddelete()
     delete[] p;
 }
 
-
+*/
 int main()
 {
 
-    int my_arr[5];
-    myfoo(my_arr);
+   // int my_arr[5];
+   // myfoo(my_arr);
 
     char pszUserName[20] = { 0 };
     char pszUserPass[20] = { 0 };
@@ -50,10 +59,10 @@ int main()
     printf("\n Enter User Password:");
     scanf("%s", pszUserPass);
 
-    if (mylogin(pszUserName, pszUserPass))
+   /* if (mylogin(pszUserName, pszUserPass))
         printf("\n Login Succeeded");
     else
-        printf("\n Login Failed");
+        printf("\n Login Failed");*/
 }
 
 
