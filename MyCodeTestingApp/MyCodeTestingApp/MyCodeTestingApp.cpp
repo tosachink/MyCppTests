@@ -4,17 +4,9 @@
 #include <iostream>
 #include <tchar.h>
 
+// These are  tests added for validation
 
-
-
-
-
-
-
-
-
-/*
-bool mylogin(const char* kpszUserName, const char* kpszPassword)
+bool _mylogin(const char* kpszUserName, const char* kpszPassword)
 {
     bool retval = false;
     if (0 != _tcslen(kpszUserName) && 0 != _tcslen(kpszPassword))
@@ -26,30 +18,30 @@ bool mylogin(const char* kpszUserName, const char* kpszPassword)
     return retval;
 }
 
-bool mycheckOverflow(unsigned short x, unsigned short y) {
+bool _mycheckOverflow(unsigned short x, unsigned short y) {
     // BAD: comparison is always false due to type promotion
     return (x + y < x);
 }
 
-void myfoo(int a[10]) {
+void _myfoo(int a[10]) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         a[i] = i * 2;
     }
 }
 
-void mynewanddelete()
+void _mynewanddelete()
 {
     int* p = new int;
     delete[] p;
 }
 
-*/
+
 int main()
 {
 
-   // int my_arr[5];
-   // myfoo(my_arr);
+    int my_arr[5];
+    _myfoo(my_arr);
 
     char pszUserName[20] = { 0 };
     char pszUserPass[20] = { 0 };
@@ -59,10 +51,10 @@ int main()
     printf("\n Enter User Password:");
     scanf("%s", pszUserPass);
 
-   /* if (mylogin(pszUserName, pszUserPass))
+   if (_mylogin(pszUserName, pszUserPass))
         printf("\n Login Succeeded");
     else
-        printf("\n Login Failed");*/
+        printf("\n Login Failed");
 }
 
 
