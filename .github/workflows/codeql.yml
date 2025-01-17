@@ -58,7 +58,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp
-        config-file: MyCodeTestingApp\codeql-config.yml
+        config-file: ..\codeql-config.yml
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
