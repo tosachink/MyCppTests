@@ -5,7 +5,7 @@
 #include <tchar.h>
 
 
-bool login(const char* kpszUserName, const char* kpszPassword)
+bool mylogin(const char* kpszUserName, const char* kpszPassword)
 {
     bool retval = false;
     if (0 != _tcslen(kpszUserName) && 0 != _tcslen(kpszPassword))
@@ -17,23 +17,30 @@ bool login(const char* kpszUserName, const char* kpszPassword)
     return retval;
 }
 
-bool checkOverflow(unsigned short x, unsigned short y) {
+bool mycheckOverflow(unsigned short x, unsigned short y) {
     // BAD: comparison is always false due to type promotion
     return (x + y < x);
 }
 
-void foo(int a[10]) {
+void myfoo(int a[10]) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         a[i] = i * 2;
     }
 }
 
+void mynewanddelete()
+{
+    int* p = new int;
+    delete[] p;
+}
+
+
 int main()
 {
 
     int my_arr[5];
-    foo(my_arr);
+    myfoo(my_arr);
 
 
     char pszUserName[20] = { 0 };
@@ -44,19 +51,11 @@ int main()
     printf("\n Enter User Password:");
     scanf("%s", pszUserPass);
 
-    if (login(pszUserName, pszUserPass))
+    if (mylogin(pszUserName, pszUserPass))
         printf("\n Login Succeeded");
     else
         printf("\n Login Failed");
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
