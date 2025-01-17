@@ -19,7 +19,7 @@ on:
   pull_request:
     branches:
        - 'main'
-       - '!mywipbranch'
+       - '!mywipbranch'      
   schedule:
     - cron: '34 13 * * 3'
 
