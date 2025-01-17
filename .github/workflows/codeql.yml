@@ -58,7 +58,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp
-        config-file: ..\codeql-config.yml
+        config-file: .github\codeql-config.yml
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
