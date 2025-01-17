@@ -42,7 +42,6 @@ int main()
     int my_arr[5];
     myfoo(my_arr);
 
-
     char pszUserName[20] = { 0 };
     char pszUserPass[20] = { 0 };
     printf("\n Enter User Name:");
@@ -55,7 +54,6 @@ int main()
         printf("\n Login Succeeded");
     else
         printf("\n Login Failed");
-
 }
 
 
