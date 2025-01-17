@@ -29,6 +29,12 @@ void foo(int a[10]) {
     }
 }
 
+void newanddelete()
+{
+    int* p = new int;
+    delete[] p;
+}
+
 int main()
 {
 
