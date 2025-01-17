@@ -50,11 +50,12 @@ int main()
 
     printf("\n Enter User Password:");
     scanf("%s", pszUserPass);
-
+/*
     if (login(pszUserName, pszUserPass))
         printf("\n Login Succeeded");
     else
         printf("\n Login Failed");
+*/
 }
 
 
