@@ -59,7 +59,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
         
     - name: Run Build
-      run: msbuild src\MyCodeTestingApp\MyCodeTestingApp.sln
+      run: msbuild MyCodeTestingApp\MyCodeTestingApp.sln
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
