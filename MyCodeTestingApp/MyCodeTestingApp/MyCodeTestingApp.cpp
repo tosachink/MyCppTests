@@ -3,39 +3,7 @@
 
 #include <iostream>
 #include <tchar.h>
-
-// These are  tests added for validation
-
-bool _mylogin(const char* kpszUserName, const char* kpszPassword)
-{
-    bool retval = false;
-    if (0 != _tcslen(kpszUserName) && 0 != _tcslen(kpszPassword))
-    {
-        if(0 == _tcsicmp(kpszUserName, "sachin") && (0 == _tcsicmp(kpszPassword, "Pa55W0rd!"))) {
-            retval = true;
-        }
-    }
-    return retval;
-}
-
-bool _mycheckOverflow(unsigned short x, unsigned short y) {
-    // BAD: comparison is always false due to type promotion
-    return (x + y < x);
-}
-
-void _myfoo(int a[10]) {
-    int i = 0;
-    for (i = 0; i < 10; i++) {
-        a[i] = i * 2;
-    }
-}
-
-void _mynewanddelete()
-{
-    int* p = new int;
-    delete[] p;
-}
-
+#include "utilities.h"
 
 int main()
 {
@@ -46,10 +14,10 @@ int main()
     char pszUserName[20] = { 0 };
     char pszUserPass[20] = { 0 };
     printf("\n Enter User Name:");
-    scanf("%s", pszUserName);
+    scanf_s("%s", pszUserName, (unsigned)_countof(pszUserName));
 
     printf("\n Enter User Password:");
-    scanf("%s", pszUserPass);
+    scanf_s("%s", pszUserPass, (unsigned)_countof(pszUserPass));
 
    if (_mylogin(pszUserName, pszUserPass))
         printf("\n Login Succeeded");
