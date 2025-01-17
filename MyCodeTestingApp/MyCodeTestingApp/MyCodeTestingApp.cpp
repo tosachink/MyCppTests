@@ -17,6 +17,11 @@ bool login(const char* kpszUserName, const char* kpszPassword)
     return retval;
 }
 
+bool checkOverflow(unsigned short x, unsigned short y) {
+    // BAD: comparison is always false due to type promotion
+    return (x + y < x);
+}
+
 int main()
 {
     char pszUserName[20] = { 0 };
