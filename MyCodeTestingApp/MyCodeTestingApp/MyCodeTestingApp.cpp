@@ -22,8 +22,20 @@ bool checkOverflow(unsigned short x, unsigned short y) {
     return (x + y < x);
 }
 
+void foo(int a[10]) {
+    int i = 0;
+    for (i = 0; i < 10; i++) {
+        a[i] = i * 2;
+    }
+}
+
 int main()
 {
+
+    int my_arr[5];
+    foo(my_arr);
+
+
     char pszUserName[20] = { 0 };
     char pszUserPass[20] = { 0 };
     printf("\n Enter User Name:");
