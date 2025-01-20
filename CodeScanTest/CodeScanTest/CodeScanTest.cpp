@@ -6,10 +6,25 @@
 
 #include <iostream>
 #include <tchar.h>
+#include "commonfunctions.h"
 
 int main()
 {
     printf("Hello World!");
+
+    // New and delete test
+    newanddelete();
+
+    // arr mimatch test
+    int myarr[7];
+    arrmismatch(myarr);
+
+    // overflow check
+    overflowchecktest(30000, 40000);
+
+    // allocation test
+    testallocation(10, 30);
+
 }
 
 
