@@ -60,13 +60,13 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: c-cpp
-        config-file: MyCodeTestingApp\codeql-config.yml
+        config-file: .github\codeql-config.yml
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
         
     - name: Run Build
-      run: msbuild MyCodeTestingApp\MyCodeTestingApp.sln
+      run: msbuild CodeScanTest\CodeScanTest.sln
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
