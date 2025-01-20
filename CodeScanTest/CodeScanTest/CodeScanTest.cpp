@@ -16,7 +16,7 @@ int main()
     newanddelete();
 
     // arr mimatch test
-    int myarr[2];
+    int myarr[7];
     arrmismatch(myarr);
 
     // overflow check

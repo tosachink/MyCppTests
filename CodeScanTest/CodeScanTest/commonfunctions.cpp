@@ -7,7 +7,7 @@
 void newanddelete()
 {
 	int* p = new int;
-	delete[] p;
+	delete p;
 }
 
 void arrmismatch(int a[7])
@@ -19,7 +19,7 @@ void arrmismatch(int a[7])
 }
 bool overflowchecktest(unsigned short x, unsigned short y) {
 	// BAD: comparison is always false due to type promotion
-	return (x + y < x);
+	return (unsigned short(x + y) < x);
 }
 
 void testallocation(int allocations, int size)
@@ -27,6 +27,7 @@ void testallocation(int allocations, int size)
 	for (int count = 0; count < allocations; count++)
 	{
 		char * path = (char*)malloc(size);
+		free(path);
 	}
 }
 
