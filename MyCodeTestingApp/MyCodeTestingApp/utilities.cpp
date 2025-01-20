@@ -32,3 +32,8 @@ void _mynewanddelete()
     int* p = new int;
     delete[] p;
 }
+
+bool _isNull(void* p)
+{
+    return p = NULL;
+}
