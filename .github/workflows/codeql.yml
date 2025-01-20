@@ -16,10 +16,12 @@ on:
     branches: 
       - 'main'
       - '!mywipbranch'
+      - '!mycodescantest'
   pull_request:
     branches:
        - 'main'
-       - '!mywipbranch'      
+       - '!mywipbranch' 
+       - '!mycodescantest'
   schedule:
     - cron: '34 13 * * 3'
 
